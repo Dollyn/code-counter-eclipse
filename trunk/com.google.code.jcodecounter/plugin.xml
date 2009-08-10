@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="com.google.code.dollynprojects.codestatistics.objectContribution1"
+            objectClass="org.eclipse.core.resources.IProject">
+         <action
+               class="com.google.code.jcodecounter.test.Action1"
+               id="com.google.code.dollynprojects.codestatistics.action1"
+               label="label"
+               menubarPath="com.google.code.dollynprojects.dollyntools/code">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="com.google.code.dollynprojects.codestatistics.dollyntools"
+            name="DollynTools">
+      </category>
+      <view
+            category="com.google.code.dollynprojects.codestatistics.dollyntools"
+            class="com.google.code.jcodecounter.ui.StatisticsResultView"
+            icon="icons/dollyn16.png"
+            id="com.google.code.dollynprojects.codestatistics.resultview"
+            name="Statistics Result"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.viewActions">
+      <viewContribution
+            id="com.google.code.dollynprojects.codestatistics.countallaction"
+            targetID="com.google.code.dollynprojects.codestatistics.resultview">
+         <action
+               class="com.google.code.jcodecounter.ui.CountAllViewActionDelegate"
+               icon="icons/dollyn16.png"
+               id="com.google.code.dollynprojects.codestatistics.action1"
+               label="CountAll"
+               style="push"
+               toolbarPath="CountAll">
+         </action>
+      </viewContribution>
+   </extension>
+   <extension
+         point="org.eclipse.help.toc">
+   </extension>
+
+</plugin>
