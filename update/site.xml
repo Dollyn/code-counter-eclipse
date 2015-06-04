@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.google.code.jcodecounter.feature_1.0.0.201506050020.jar" id="com.google.code.jcodecounter.feature" version="1.0.0.201506050020">
+      <category name="com.google.code.jcodecounter"/>
+   </feature>
+   <category-def name="com.google.code.jcodecounter" label="Code Counter"/>
+</site>
