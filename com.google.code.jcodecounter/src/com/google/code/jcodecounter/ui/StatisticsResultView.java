@@ -28,6 +28,7 @@ import org.eclipse.jface.viewers.ViewerFilter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.dialogs.FilteredTree;
 import org.eclipse.ui.dialogs.PatternFilter;
@@ -210,6 +211,9 @@ public class StatisticsResultView extends ViewPart {
 
 						public void run() {
 							getViewer().refresh();
+							for (TreeColumn col : viewer.getTree().getColumns()) {
+								col.pack();
+							}
 						}
 						
 					});
