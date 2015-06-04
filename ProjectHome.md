@@ -1,0 +1,1 @@
+Code-Counter is an eclipse plug-in for counting the lines-of-code.
